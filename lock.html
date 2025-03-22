@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ransomware Demo</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    .lock-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome To Testing Ransome</h1>
+  <button onclick="lockScreen()">Lock Screen</button>
+  
+  <div class="lock-screen" id="lock-screen">
+    <h1>Your screen has been locked!</h1>
+    <p>To unlock, enter the password: <input type="password" id="password"></p>
+    <button onclick="unlockScreen()">Unlock</button>
+  </div>
+  
+  <script src="kage.js"></script>
+</body>
+</html>
