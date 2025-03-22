@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,11 +16,12 @@
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
       display: none;
+      z-index: 1000;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome To Testing Ransome</h1>
+  <h1>Welcome to Ransomware Demo</h1>
   <button onclick="lockScreen()">Lock Screen</button>
   
   <div class="lock-screen" id="lock-screen">
@@ -30,6 +30,21 @@
     <button onclick="unlockScreen()">Unlock</button>
   </div>
   
-  <script src="kage.js"></script>
+  <script>
+  
+  function lockScreen() {
+  document.getElementById("lock-screen").style.display = "block";
+  document.body.style.overflow = "hidden";
+}
+
+function unlockScreen() {
+  const password = document.getElementById("password").value;
+  if (password === "rahasia") {
+    document.getElementById("lock-screen").style.display = "none";
+    document.body.style.overflow = "auto";
+  } else {
+    alert("Password salah!");
+  }
+}</script>
 </body>
 </html>
