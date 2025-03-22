@@ -32,7 +32,11 @@
   
   <script>
   
-  function lockScreen() {
+  document.addEventListener("DOMContentLoaded", function() {
+  lockScreen();
+});
+
+function lockScreen() {
   document.getElementById("lock-screen").style.display = "block";
   document.body.style.overflow = "hidden";
 }
@@ -44,6 +48,8 @@ function unlockScreen() {
     document.body.style.overflow = "auto";
   } else {
     alert("Password salah!");
+  }
+}
   }
 }</script>
 </body>
